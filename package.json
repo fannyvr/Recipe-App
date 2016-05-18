@@ -1,0 +1,24 @@
+{
+  "name": "recipeapp",
+  "version": "1.0.0",
+  "description": "search recipes for the week",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "prod": "webpack -p",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fanny Vasquez",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.0.2",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.9.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "html-webpack-plugin": "^2.17.0"
+  }
+}
