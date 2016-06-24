@@ -4,3 +4,4 @@ dist
 *.log
 bower_components
 config.js
+notes.js
