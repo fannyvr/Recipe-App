@@ -7,7 +7,7 @@ import MyRecipes from '../components/MyRecipes';
 const routes = (
   <Router history={hashHistory}>
     <Route path="/" component={AppContainer}>
-      <IndexRoute path="/myrecipes" component={MyRecipes}/>
+      <IndexRoute component={MyRecipes}/>
       <Route path="/searchrecipes" component={SearchRecipes}/>
     </Route>
   </Router>
