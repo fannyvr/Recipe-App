@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-DOM';
-import {hashHistory} from 'react-router';
+import {hashHistory, IndexRoute} from 'react-router';
+import '../styles/navBar.css';
 
 class NavBar extends Component{
   render (){
     return(
       <div>
         <ul>
-          <a onClick= {()=> hashHistory.push('/myrecipes')}> My Recipes </a>
-          <a onClick= {()=> hashHistory.push('/searchrecipes')}> Search Recipes </a>
+          <li><a onClick= {()=> hashHistory.push({IndexRoute})}> My Recipes </a> </li>
+          <li><a onClick= {()=> hashHistory.push('/searchrecipes')}> Search Recipes </a></li>
         </ul>
       </div>
     )
