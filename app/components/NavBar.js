@@ -5,10 +5,10 @@ import '../styles/navBar.css';
 
 const NavBar = () => (
   <div>
-	  <ul>
-		  <li><a onClick= {()=> hashHistory.push({IndexRoute})}> My Recipes </a> </li>
-		  <li><a onClick= {()=> hashHistory.push('/searchrecipes')}> Search Recipes </a></li>
-		  <li><a onClick= {()=> hashHistory.push('/signedout')}> Sign Out </a></li>
+	  <ul className="nav">
+		  <li className="navButton"><a onClick= {()=> hashHistory.push({IndexRoute})}> My Recipes </a> </li>
+		  <li className="navButton"><a onClick= {()=> hashHistory.push('/searchrecipes')}> Search Recipes </a></li>
+		  <li className="navButton"><a onClick= {()=> hashHistory.push('/signedout')}> Sign Out </a></li>
 	  </ul>
   </div>
  )
