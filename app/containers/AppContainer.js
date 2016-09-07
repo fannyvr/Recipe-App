@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import NavBar from '../components/NavBar';
+import NavBar from '../components/NavBar/NavBar';
 
 class AppContainer extends Component{
   render (){
