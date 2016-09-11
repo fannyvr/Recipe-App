@@ -1,12 +1,20 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import NavBar from '../components/NavBar/NavBar';
+import Nav from '../components/nav/Nav';
 
 class AppContainer extends Component{
   render (){
+    var logedIn;
+
+    if(this.props.location.pathname === '/signedout'){
+      logedIn = null;
+    }else{
+      logedIn = <Nav />;
+    }
+    
     return(
       <div>
-        <NavBar />
+        {logedIn}
         {this.props.children}
       </div>
     )
