@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-DOM';
 import {hashHistory, IndexRoute} from 'react-router';
 import './nav.css';
 
