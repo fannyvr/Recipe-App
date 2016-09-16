@@ -5,10 +5,10 @@ const Search = (props) => (
     <form>
       <br />
       Main Ingredient <br />
-      <input type="text" onChange={props.onKeyDown} value={props.enterIngredient} placeholder="Beef" />
+      <input type="text" onChange={props.onIngredientChange} value={props.enterIngredient} />
       <br /> <br />
       Type of Meal <br/>
-      <select>
+      <select onChange={props.onMealChange} value={props.mealChoice}>
         <option value="breakfast"> Breakfast </option>
         <option value="lunch"> Lunch </option>
         <option value="dinner"> Dinner </option>
