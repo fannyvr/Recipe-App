@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Search = () => (
+const Search = (props) => (
   <div>
     <form>
       <br />
       Main Ingredient <br />
-      <input type="text" placeholder="Beef" />
+      <input type="text" onChange={props.onKeyDown} value={props.enterIngredient} placeholder="Beef" />
       <br /> <br />
       Type of Meal <br/>
       <select>
@@ -32,3 +32,5 @@ const Search = () => (
 )
 
 export default Search;
+
+
