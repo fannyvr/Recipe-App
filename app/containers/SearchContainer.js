@@ -4,18 +4,25 @@ import Search from '../components/search/Search';
 const SearchContainer = React.createClass({
   
   getInitialState(){
-    return {ingredient: " "}
+    return {ingredient: ' ', meal: 'Breakfast'}
   },
   
-  handleChange(event){
+  handleIngredientChange(event){
     this.setState({ingredient: event.target.value})
   },
-  
+
+  handleMealChange(event){
+    this.setState({meal: event.target.value})
+    console.log("STATE", this.state)
+  },
+
   render(){
     return(
       <div>
-        <Search onKeyDown={this.handleChange} 
-                enterIngredient={this.state.ingredient} />
+        <Search onIngredientChange={this.handleIngredientChange} 
+                enterIngredient={this.state.ingredient} 
+                onMealChange={this.handleMealChange}
+                mealChoice={this.state.meal} />
       </div>
     )
   }
