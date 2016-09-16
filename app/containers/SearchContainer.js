@@ -1,14 +1,24 @@
 import React, {Component} from 'react';
 import Search from '../components/search/Search';
 
-class SearchContainer extends Component {
+const SearchContainer = React.createClass({
+  
+  getInitialState(){
+    return {ingredient: " "}
+  },
+  
+  handleChange(event){
+    this.setState({ingredient: event.target.value})
+  },
+  
   render(){
     return(
       <div>
-        <Search />
+        <Search onKeyDown={this.handleChange} 
+                enterIngredient={this.state.ingredient} />
       </div>
     )
   }
-}
+})
 
 export default SearchContainer;
