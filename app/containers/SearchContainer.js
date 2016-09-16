@@ -13,7 +13,6 @@ const SearchContainer = React.createClass({
 
   handleMealChange(event){
     this.setState({meal: event.target.value})
-    console.log("STATE", this.state)
   },
 
   render(){
