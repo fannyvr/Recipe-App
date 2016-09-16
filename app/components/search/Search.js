@@ -15,7 +15,7 @@ const Search = (props) => (
       </select>
       <br /> <br />
       Number of Recipes <br/>
-      <select>
+      <select onChange={props.onMealNumberChange} value={props.mealNumberChoice}>
         <option value="1"> 1 </option>
         <option value="2"> 2 </option>
         <option value="3"> 3 </option>
