@@ -4,7 +4,7 @@ import Search from '../components/search/Search';
 const SearchContainer = React.createClass({
   
   getInitialState(){
-    return {ingredient: ' ', meal: 'Breakfast'}
+    return {ingredient: ' ', meal: 'Breakfast', number: 1}
   },
   
   handleIngredientChange(event){
@@ -15,13 +15,19 @@ const SearchContainer = React.createClass({
     this.setState({meal: event.target.value})
   },
 
+  handleMealNumberChange(event){
+    this.setState({number: event.target.value})
+  },
+
   render(){
     return(
       <div>
         <Search onIngredientChange={this.handleIngredientChange} 
                 enterIngredient={this.state.ingredient} 
                 onMealChange={this.handleMealChange}
-                mealChoice={this.state.meal} />
+                mealChoice={this.state.meal}
+                onMealNumberChange={this.handleMealNumberChange}
+                mealNumberChoice={this.state.number} />
       </div>
     )
   }
