@@ -7,26 +7,22 @@ const SearchContainer = React.createClass({
     return {ingredient: ' ', meal: 'Breakfast', number: 1}
   },
   
-  handleIngredientChange(event){
-    this.setState({ingredient: event.target.value})
-  },
-
-  handleMealChange(event){
-    this.setState({meal: event.target.value})
-  },
-
-  handleMealNumberChange(event){
-    this.setState({number: event.target.value})
+  handleChange(keyword){
+    return (event) => {
+      const state = {};
+      state[keyword] = event.target.value;
+      this.setState(state);
+    }
   },
 
   render(){
     return(
       <div>
-        <Search onIngredientChange={this.handleIngredientChange} 
+        <Search onChange={this.handleChange} 
                 enterIngredient={this.state.ingredient} 
-                onMealChange={this.handleMealChange}
+                onChange={this.handleChange}
                 mealChoice={this.state.meal}
-                onMealNumberChange={this.handleMealNumberChange}
+                onChange={this.handleChange}
                 mealNumberChoice={this.state.number} />
       </div>
     )
