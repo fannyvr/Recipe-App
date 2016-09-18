@@ -23,7 +23,7 @@ const SearchContainer = React.createClass({
                 onChange={this.handleChange}
                 mealChoice={this.state.meal}
                 onChange={this.handleChange}
-                mealNumberChoice={this.state.number} />
+                numberOfRecipes={this.state.number} />
       </div>
     )
   }
