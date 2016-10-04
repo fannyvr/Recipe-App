@@ -20,9 +20,7 @@ const SearchContainer = React.createClass({
       <div>
         <Search onChange={ this.handleChange } 
                 enterIngredient={ this.state.ingredient } 
-                onChange={ this.handleChange }
                 mealChoice={ this.state.meal }
-                onChange={ this.handleChange }
                 numberOfRecipes={ this.state.number } />
       </div>
     )
